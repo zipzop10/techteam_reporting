@@ -1,0 +1,25 @@
+<% provide(:title, 'New Task') %>
+<div class="center">
+	<h1>New Task</h1>
+</div>	
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@task) do |f| %>
+
+      <%= f.label :Title %>
+      <%= f.text_field :Title %>
+
+      <%= f.label :Notes, "Description" %>
+      <%= f.text_area :Notes, rows: '10' %>
+
+      <%= f.label :Type, "Type of Task"%>
+      <%= f.text_field :Type %>
+      <span class="help-block">Example block-level help text here.</span>
+      <%= f.label :DateRequired, "Date Required" %>
+      <%= f.text_field :DateRequired %>
+
+      <%= f.submit "Create the Task", class: "btn center btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

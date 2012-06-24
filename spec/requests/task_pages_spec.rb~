@@ -1,0 +1,15 @@
+require 'spec_helper'
+
+describe "Task Pages" do
+	
+	subject {page}
+	
+	describe "New task page" do
+		before {visit root_path}
+		it { should have_selector('h1',    text: 'New Task') }
+		it { should have_selector('title', text: "Technical Team Tasking | New Task") }
+	
+	end 
+  	  
+  
+end

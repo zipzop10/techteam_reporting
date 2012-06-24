@@ -16,9 +16,7 @@
           <%= link_to "Tech Tasking", '#', id: "logo" %>
           <nav>
             <ul class="nav pull-right">
-            <li><%= link_to "New", '#' %></li>  
-            <li><%= link_to "Report", '#' %></li> 
-            <li><%= link_to "Help",    '#' %></li>             
+              <li><%= link_to "Help",    '#' %></li>             
             </ul>
           </nav>
         </div>
