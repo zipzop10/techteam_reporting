@@ -1,7 +1,7 @@
 TechteamReporting::Application.routes.draw do
   #get "tasks/new"
   resources :tasks
-  root to: 'tasks#new'
+  root to: 'tasks#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
