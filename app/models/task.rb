@@ -16,4 +16,8 @@
 
 class Task < ActiveRecord::Base
   attr_accessible :DateRequired, :Days, :Team, :Title, :Assigned, :Notes, :Type
+  validates :Title, :Notes, :Team , :Type, presence: true
+  
+
+
 end

@@ -17,5 +17,9 @@
 require 'spec_helper'
 
 describe Task do
+
+	before {@user = User}
+
+
   
 end
