@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   
   def index 
 
-    Task.all
+    @tasks=Task.all
 
   end  
 
