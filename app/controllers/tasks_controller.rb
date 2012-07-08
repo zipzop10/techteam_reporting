@@ -1,4 +1,13 @@
 class TasksController < ApplicationController
+  
+  def index 
+
+    @tasks=Task.all
+
+  end  
+
+
+
   def new
   	  @task= Task.new
   end
@@ -6,7 +15,15 @@ class TasksController < ApplicationController
   def create
   
 	 @task = Task.new(params[:task])
-	 redirect_to @task
+    if @task.save
+
+	     redirect_to @task
+
+    else 
+
+      render 'new'
+
+    end
   
   end
   

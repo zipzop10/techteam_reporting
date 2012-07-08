@@ -12,6 +12,9 @@ describe "Task Pages" do
 	end 
   
 describe "create new task" do
+
+
+
 	before { visit root_path }
 
 	let(:submit) { "Create a Task" }
@@ -24,16 +27,19 @@ describe "create new task" do
 
     describe "with valid information" do
       before do
-      	      fill_in "Title",         with: "A new tech team task"
-      	      fill_in "Notes",        with: "This is a new task for the tech team "
+      	      fill_in "Title",         with: "richard"
+      	      fill_in "task_Notes",        with: "This is a new task for the tech team "
       	      fill_in "Team",     with: "Operations"
-      	      fill_in "DateRequired", with: "1 jan 2013"
       	      fill_in "Type", with: "Development"
      
       end
 
       it "should create a task" do
         expect { click_button submit }.to change(Task, :count).by(1)
+
+        page.should have_selector('title', text: "Technical Team Tasking | richard") 
+
+
       end
     end
   

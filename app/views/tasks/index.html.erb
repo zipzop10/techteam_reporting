@@ -1,5 +1,13 @@
-<% provide(:title, @task.Title) %>
-<div class="center">
+<% provide(:title, "all tasks") %>
+
+<% @tasks.each do |task| %>
+<li>
+	
+
+<% end %> 
+
+
+
 <h1><%=@task.Title %></h1> 
 <h2><%=@task.Notes %></h2> 
 <h2><%=@task.Type %></h2> 
